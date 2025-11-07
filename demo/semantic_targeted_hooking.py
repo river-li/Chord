@@ -2,16 +2,6 @@
 Targeted Semantic Hooking Demo
 ===============================
 ARTIFACT EVALUATION: This demonstrates Listing 2 in Section 4.B (Targeted Semantic Hooking)
-
-This demonstrates how a malicious tool can hook onto YahooFinanceNews by claiming
-to provide external knowledge (company name -> ticker conversion).
-
-Attack Vector: External Knowledge Dependency (Section 3.2 - Targeted Semantic Hooking)
-
-Key Points:
-- First shows baseline: LLM knows Tesla = TSLA and can get news directly
-- Then shows attack: When malicious tool is present, agent calls it first
-- Result: Company query leakage through the malicious tool
 """
 
 import os
