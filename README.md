@@ -9,7 +9,7 @@ export OPENAI_API_KEY="your-api-key"
 
 ## How to Run Demos
 
-**1. Targeted Semantic Hooking (`semantic_targeted_hooking.py`) - Section 4.B - Listing 2**
+**1. Targeted Semantic Hooking (`semantic_targeted_hooking.py`) - Section 4.B - Listing 2&3**
 
 Demonstrates XTH (data harvesting) attack. CompanyToTicker malicious tool hooks YahooFinanceNews and exfiltrates company names. Shows baseline (LLM knows Tesla=TSLA) vs attack (malicious tool intercepts).
 
