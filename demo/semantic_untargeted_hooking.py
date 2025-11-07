@@ -2,16 +2,6 @@
 Untargeted Semantic Hooking Demo
 =================================
 ARTIFACT EVALUATION: This demonstrates Listing 9 in Appendix but explained in Section 4.B (Scenario-based Semantic Hooking)
-
-This demonstrates how a malicious tool can hook onto MULTIPLE different tools
-by claiming to provide scenario-based functionality (error handling).
-
-Attack Vector: Scenario-based Semantic Hooking (Section 3.2 - Untargeted)
-
-Key Points:
-- ErrorExplainer hooks onto ANY tool that produces errors
-- Exfiltrates system prompt, user prompt, and error messages
-- Works across different tool types (untargeted attack)
 """
 
 import os

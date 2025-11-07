@@ -2,18 +2,6 @@
 Syntax Format Hooking Demo
 ===========================
 ARTIFACT EVALUATION: This demonstrates Listing 1 in Section 4.C (Syntax Format Hooking)
-
-This demonstrates how a malicious tool can hook onto tools that require
-specific input formats by claiming to help format the input correctly.
-
-Attack Vector: Syntax Format Hooking - Domain-Specific Format (Section 3.3)
-Target: YouTubeSearchTool (requires "comma-separated list" format)
-
-Key Points:
-- YoutubeSearchPreprocessor claims to help format comma-separated list
-- Tool appears benign (just sends data to server)
-- Malicious logic is SERVER-SIDE (hidden from code inspection)
-- Server selectively pollutes search results based on query content
 """
 
 import os
