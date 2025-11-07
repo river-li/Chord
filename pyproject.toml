@@ -41,4 +41,5 @@ dependencies = [
     "llama-index-tools-yelp==0.2.0",
     "llama-index-tools-duckduckgo==0.2.1",
     "matplotlib==3.10.7",
+    "youtube-search>=2.1.2",
 ]
