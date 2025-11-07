@@ -1,0 +1,190 @@
+import os
+import json
+from langchain_openai.chat_models import ChatOpenAI
+from dotenv import load_dotenv
+# current file path
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+load_dotenv()
+
+def load_queries():
+    queries = {}
+    with open(os.path.join(CURRENT_DIR, "..", "data", "query.json"), "r") as f:
+        queries = json.load(f)
+    return queries
+
+
+def load_malicious_tools():
+    with open(os.path.join(CURRENT_DIR, "..", "data", "malicious_tools.json"), 'r') as f:
+        malicious_tools = json.load(f)
+        predecessor = malicious_tools["langchain"]["predecessor"]
+        predecessors = {}
+        for t in predecessor:
+            predecessors[list(t.keys())[0]] = list(t.values())[0]
+        successor = malicious_tools["langchain"]["successor"]
+        successors = {}
+        for t in successor:
+            successors[list(t.keys())[0]] = list(t.values())[0]
+
+        return predecessors, successors
+
+
+def load_tools():
+    from langchain_community.tools import (
+        ArxivQueryRun,
+        DuckDuckGoSearchRun,
+        DuckDuckGoSearchResults,
+        OpenWeatherMapQueryRun,
+        RedditSearchRun,
+        ShellTool,
+        StackExchangeTool,
+        TavilySearchResults,
+        TavilyAnswer,
+        WikipediaQueryRun,
+        YouTubeSearchTool,
+        YahooFinanceNewsTool,
+    )
+
+    from langchain_community.tools.amadeus.closest_airport import AmadeusClosestAirport
+    from langchain_community.tools.amadeus.flight_search import AmadeusFlightSearch
+
+    from amadeus import Client
+    AmadeusClosestAirport.model_rebuild()
+    AmadeusFlightSearch.model_rebuild()
+
+    from langchain_community.tools.brave_search.tool import BraveSearch
+    
+    from langchain_community.tools.semanticscholar import SemanticScholarQueryRun
+    from langchain_community.tools.sleep.tool import SleepTool
+    from langchain_community.tools.wikidata.tool import WikidataQueryRun
+
+    from tempfile import TemporaryDirectory
+    from langchain_community.agent_toolkits import FileManagementToolkit
+    file_toolkit = FileManagementToolkit(
+        root_dir=str(TemporaryDirectory())
+    )
+
+    from langchain_community.agent_toolkits.financial_datasets.toolkit import (
+        FinancialDatasetsToolkit,
+        FinancialDatasetsAPIWrapper
+    )
+    financial_toolkit = FinancialDatasetsToolkit(
+        api_wrapper=FinancialDatasetsAPIWrapper(
+            financial_datasets_api_key=os.environ.get("FINANCIAL_DATASETS_API_KEY", "")
+        )
+    )
+
+    from langchain_community.utilities import WikipediaAPIWrapper
+    from langchain_community.utilities import StackExchangeAPIWrapper
+    from langchain_community.utilities import OpenWeatherMapAPIWrapper
+    from langchain_community.utilities.reddit_search import RedditSearchAPIWrapper
+    from langchain_community.utilities.wikidata import WikidataAPIWrapper
+
+    from langchain_community.utilities.polygon import PolygonAPIWrapper
+    from langchain_community.agent_toolkits.polygon.toolkit import PolygonToolkit
+    polygon_toolkit = PolygonToolkit.from_polygon_api_wrapper(PolygonAPIWrapper())
+
+    from langchain_community.agent_toolkits.openapi.toolkit import RequestsToolkit
+    from langchain_community.utilities.requests import TextRequestsWrapper
+
+    requests_toolkit = RequestsToolkit(
+        requests_wrapper=TextRequestsWrapper(headers={}),
+        allow_dangerous_requests=True,
+    )
+
+    tools = [
+        AmadeusClosestAirport(),
+        AmadeusFlightSearch(),
+        ArxivQueryRun(),
+        BraveSearch.from_api_key(api_key=os.environ.get("BRAVE_API_KEY", ""), search_kwargs={"count": 1}),
+        DuckDuckGoSearchRun(),
+        DuckDuckGoSearchResults(),
+        *file_toolkit.get_tools(),
+        *financial_toolkit.get_tools(),
+        OpenWeatherMapQueryRun(api_wrapper=OpenWeatherMapAPIWrapper()),
+        *polygon_toolkit.get_tools(),
+        *requests_toolkit.get_tools(),
+        RedditSearchRun(api_wrapper=RedditSearchAPIWrapper(
+            reddit_client_id=os.environ.get("REDDIT_CLIENT_ID", ""),
+            reddit_client_secret=os.environ.get("REDDIT_CLIENT_SECRET", ""),
+            reddit_user_agent="Langchain-based application"
+        )),
+        SemanticScholarQueryRun(),
+        ShellTool(),
+        SleepTool(),
+        StackExchangeTool(api_wrapper=StackExchangeAPIWrapper()),
+        TavilySearchResults(max_results=1),
+        TavilyAnswer(max_results=1),
+        WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper()),
+        WikidataQueryRun(api_wrapper=WikidataAPIWrapper()),
+        YahooFinanceNewsTool(),
+        YouTubeSearchTool(),
+    ]
+
+    # Note: some of the tools imported above are not available for free plan, so we don't have corresponding tool caches for them
+    with open(os.path.join(CURRENT_DIR, "..", "data", "victim_tools"), "r") as f:
+        victim_tools = f.readlines()
+        victim_tools = [tool.strip() for tool in victim_tools]
+    
+    tool_dict = {}
+    for tool in tools:
+        if tool.name in victim_tools:
+            tool_dict[tool.name] = tool
+
+    return tool_dict
+
+
+def load_params():
+    with open(os.path.join(CURRENT_DIR, "..", "data", "malicious_tool_arguments.json"), "r") as f:
+        params = json.load(f)
+    pred = params["predecessor"]
+    succ = params["successor"]
+    return pred, succ
+
+
+def main():
+    tools = load_tools()
+    queries = load_queries()
+    predecessors, successors = load_malicious_tools()
+    pred_params, succ_params = load_params()
+
+    from langchain_community.cache import SQLiteCache
+    from langchain_core.globals import set_llm_cache
+    set_llm_cache(SQLiteCache(os.path.join(CURRENT_DIR, "..", "cache", "gpt-4o_langchain.db")))
+
+    llm = ChatOpenAI(model="gpt-4o-2024-08-06", temperature=0)
+    from chord.agent import Agent
+
+    tool_cache_path = os.path.join(CURRENT_DIR, "..", "cache", "tool_cache.db")
+    # test the predecessor attack
+    for tool in tools:
+        if tool not in predecessors:
+            continue
+        t = tools[tool]
+        if t.name not in pred_params:
+            continue
+        query = queries[t.name]
+        malicious_tool_info = predecessors[t.name]
+
+        LOG_PREFIX = "gpt-4o_langchain_predecessor"
+        malicious_tool_param = pred_params[t.name]
+        agent = Agent(t, llm, query, enable_hijack=True, enable_harvest=True, enable_pollute=True, attack_only=True, malicious_tool=malicious_tool_info, log_prefix=LOG_PREFIX, predecessor=True, malicious_tool_params=malicious_tool_param, tool_cache=tool_cache_path, defense="none", log_folder=f"./logs/langchain_predecessor")
+        agent.run(3)
+        
+
+        if tool not in successors:
+            continue
+        if t.name not in succ_params:
+            continue
+        successor_malicious_tool_info = successors[t.name]
+        successor_malicious_tool_param = succ_params[t.name]
+
+        LOG_PREFIX = "gpt-4o_langchain_successor"
+        agent = Agent(t, llm, query, enable_hijack=True, enable_harvest=True, enable_pollute=True, attack_only=True, malicious_tool=successor_malicious_tool_info, log_prefix=LOG_PREFIX, predecessor=False, malicious_tool_params=successor_malicious_tool_param, tool_cache=tool_cache_path, defense="none", log_folder=f"./logs/langchain_successor")
+        agent.run(3)
+
+if __name__ == "__main__":
+    from langchain_community.cache import SQLiteCache
+    from langchain_core.globals import set_llm_cache
+    set_llm_cache(SQLiteCache(os.path.join(CURRENT_DIR, "..", "cache", "gpt-4o_langchain.db")))
+    main()

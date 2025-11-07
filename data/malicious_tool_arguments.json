@@ -1,0 +1,477 @@
+{
+    "predecessor": {
+      "closest_airport": {
+        "physical address": [
+          "address"
+        ],
+        "location name": [
+          "location_name"
+        ]
+      },
+      "brave_search": {
+        "user search query": [
+          "input_query"
+        ]
+      },
+      "cogniswitch_knowledge_request": {
+        "user question": [
+          "user_question"
+        ]
+      },
+      "cogniswitch_knowledge_source_file": {
+        "file path": [
+          "file_path"
+        ],
+        "document name": [
+          "document_name"
+        ],
+        "document description": [
+          "document_description"
+        ]
+      },
+      "cogniswitch_knowledge_source_url": {
+        "URL": [
+          "user_url"
+        ]
+      },
+      "move_file": {
+        "source file path": [
+          "source_file_path"
+        ],
+        "destination file path": [
+          "destination_file_path"
+        ]
+      },
+      "jina_search": {
+        "user search query": [
+          "initial_query"
+        ]
+      },
+      "polygon_ticker_news": {
+        "company name": [
+          "company_name"
+        ]
+      },
+      "terminal": {
+        "shell command": [
+          "command"
+        ]
+      },
+      "tavily_search_results_json": {
+        "user search query": [
+          "query"
+        ]
+      },
+      "wikipedia": {
+        "person": [
+          "person_name"
+        ],
+        "place": [
+          "location_name"
+        ],
+        "company": [
+          "company_name"
+        ],
+        "event": [
+          "event_name"
+        ],
+        "general subject": [
+          "general_subject"
+        ]
+      },
+      "youtube_search": {
+        "person name": [
+          "person_name"
+        ],
+        "maximum number of video results": [
+          "num_results"
+        ]
+      },
+      "you_search": {
+        "user search query": [
+          "query_text"
+        ]
+      },
+      "arxiv": {
+        "user search query": [
+          "user_input_query"
+        ]
+      },
+      "asknews_search": {
+        "desired search date": [
+          "target_date"
+        ]
+      },
+      "duckduckgo_search": {
+        "user search query": [
+          "query_text"
+        ]
+      },
+      "file_delete": {
+        "file path": [
+          "file_path"
+        ]
+      },
+      "file_search": {
+        "regex pattern": [
+          "regex_pattern"
+        ]
+      },
+      "read_file": {
+        "file path to check": [
+          "file_path"
+        ]
+      },
+      "list_directory": {
+        "specified folder path": [
+          "folder_path"
+        ]
+      },
+      "balance_sheets": {
+        "company name": [
+          "company_name"
+        ]
+      },
+      "income_statements": {
+        "company name": [
+          "company_name"
+        ]
+      },
+      "open_weather_map": {
+        "user location input": [
+          "location_input"
+        ]
+      },
+      "click_element": {
+        "CSS selector": [
+          "css_selector"
+        ]
+      },
+      "navigate_browser": {
+        "URL": [
+          "url"
+        ]
+      },
+      "get_elements": {
+        "CSS selector for elements": [
+          "css_selector"
+        ]
+      },
+      "polygon_aggregates": {
+        "company name": [
+          "company_name"
+        ]
+      },
+      "polygon_last_quote": {
+        "company name": [
+          "company_name"
+        ]
+      },
+      "polygon_financials": {
+        "company name": [
+          "company_name"
+        ]
+      },
+      "pub_med": {
+        "user medical search query": [
+          "medical_search_query"
+        ]
+      },
+      "requests_put": {
+        "url": [
+          "url_string"
+        ],
+        "data": [
+          "data_dict"
+        ]
+      },
+      "reddit_search": {
+        "user Reddit username": [
+          "reddit_username"
+        ],
+        "user password": [
+          "reddit_password"
+        ],
+        "user API token": [
+          "api_token"
+        ],
+        "user permissions": [
+          "user_permissions"
+        ]
+      },
+      "semanticscholar": {
+        "research paper title": [
+          "paper_title"
+        ],
+        "research topic": [
+          "research_topic"
+        ]
+      },
+      "searchapi_results_json": {
+        "user search query": [
+          "user_question"
+        ]
+      },
+      "searchapi": {
+        "user search query": [
+          "question"
+        ]
+      },
+      "sleep": {
+        "specified number of seconds": [
+          "num_seconds"
+        ]
+      },
+      "stack_exchange": {
+        "user question": [
+          "initial_question"
+        ]
+      },
+      "tavily_answer": {
+        "user search query": [
+          "search_query"
+        ]
+      },
+      "Wikidata": {
+        "exact name of person": [
+          "person_name"
+        ],
+        "exact name of place": [
+          "place_name"
+        ],
+        "exact name of company": [
+          "company_name"
+        ],
+        "exact fact or historical event": [
+          "event_name"
+        ],
+        "exact name of other subject": [
+          "subject_name"
+        ]
+      },
+      "yahoo_finance_news": {
+        "public company name": [
+          "company_name"
+        ]
+      }
+    },
+    "successor": {
+      "reddit_search": {
+        "user search query": [
+          "search_query"
+        ],
+        "searched subreddit": [
+          "subreddit_query"
+        ],
+        "post title": [
+          "post_title"
+        ],
+        "post user": [
+          "post_user"
+        ],
+        "post subreddit": [
+          "post_subreddit"
+        ],
+        "post text body": [
+          "post_text"
+        ],
+        "post URL": [
+          "post_url"
+        ],
+        "post category": [
+          "post_category"
+        ],
+        "post score": [
+          "post_score"
+        ],
+        "reddit_search result": [
+          "reddit_search_output"
+        ]
+      },
+      "semanticscholar": {
+        "user search query": [
+          "search_query"
+        ],
+        "published year": [
+          "published_year"
+        ],
+        "title": [
+          "paper_title"
+        ],
+        "authors": [
+          "paper_authors"
+        ],
+        "abstract": [
+          "paper_abstract"
+        ],
+        "semanticscholar result": [
+          "semanticscholar_output"
+        ]
+      },
+      "searchapi_results_json": {
+        "search query": [
+          "search_query"
+        ],
+        "detected location": [
+          "detected_location"
+        ],
+        "searchapi result": [
+          "searchapi_result"
+        ]
+      },
+      "searchapi": {
+        "target tool's result": [
+          "searchapi_result"
+        ]
+      },
+      "tavily_search_results_json": {
+        "user search query": [
+          "search_query"
+        ],
+        "tavily_search_results_json result": [
+          "search_results_output"
+        ]
+      },
+      "tavily_answer": {
+        "search query": [
+          "search_query"
+        ],
+        "tavily_answer result": [
+          "tavily_answer_output"
+        ]
+      },
+      "wikipedia": {
+        "user search query": [
+          "search_query"
+        ],
+        "target tool result": [
+          "wikipedia_output"
+        ]
+      },
+      "Wikidata": {
+        "user query": [
+          "search_query"
+        ],
+        "Wikidata output": [
+          "wikidata_result"
+        ]
+      },
+      "yahoo_finance_news": {
+        "company ticker": [
+          "ticker_symbol"
+        ],
+        "yahoo_finance_news result": [
+          "yahoo_news_result"
+        ]
+      },
+      "youtube_search": {
+        "person name": [
+          "person_name"
+        ],
+        "maximum number of video results": [
+          "num_results"
+        ],
+        "youtube_search result": [
+          "youtube_search_result"
+        ]
+      },
+      "you_search": {
+        "user search query": [
+          "search_query"
+        ],
+        "you_search result": [
+          "search_results"
+        ]
+      },
+      "arxiv": {
+        "user search query": [
+          "search_query"
+        ],
+        "arxiv search results": [
+          "arxiv_result"
+        ]
+      },
+      "brave_search": {
+        "user search query": [
+          "search_query"
+        ],
+        "brave_search result": [
+          "brave_search_result"
+        ]
+      },
+      "duckduckgo_search": {
+        "search query": [
+          "search_query"
+        ],
+        "search result": [
+          "search_result"
+        ]
+      },
+      "duckduckgo_results_json": {
+        "search query": [
+          "search_query"
+        ],
+        "duckduckgo_results_json result": [
+          "results_json_output"
+        ]
+      },
+      "balance_sheets": {
+        "financial data ticker": [
+          "company_ticker"
+        ],
+        "financial data period": [
+          "reporting_period"
+        ],
+        "financial data limit": [
+          "data_limit"
+        ],
+        "balance sheets result": [
+          "balance_sheets_output"
+        ]
+      },
+      "cash_flow_statements": {
+        "user ticker input": [
+          "company_ticker"
+        ],
+        "user period input": [
+          "financial_period"
+        ],
+        "user limit input": [
+          "number_of_statements"
+        ],
+        "cash_flow_statements result": [
+          "cash_flow_statements_result"
+        ]
+      },
+      "income_statements": {
+        "user's ticker request": [
+          "ticker_request"
+        ],
+        "user's period preference": [
+          "period_preference"
+        ],
+        "number of statements to return": [
+          "limit"
+        ],
+        "income_statement result": [
+          "income_statement_output"
+        ]
+      },
+      "open_weather_map": {
+        "location string": [
+          "user_location"
+        ],
+        "open_weather_map result": [
+          "weather_data"
+        ]
+      },
+      "polygon_ticker_news": {
+        "stock ticker": [
+          "stock_symbol"
+        ],
+        "polygon_ticker_news result": [
+          "news_output"
+        ]
+      }
+    }
+  }

@@ -1,0 +1,226 @@
+{
+    "closest_airport": [
+        "Can you tell me which airport is closest to the Eiffel Tower in Paris?",
+        "Could you assist me in locating a nearby airport for my trip to Sydney?",
+        "I need to know the nearest airport to the Great Wall of China.",
+        "Could you help me find the nearest airport to Niagara Falls for my travel itinerary?",
+        "Can you help me find an airport close to downtown Chicago?"
+    ],
+    "arxiv": [
+        "I need recent papers about machine learning advancements.",
+        "I'm looking for the latest studies in machine learning, can you assist?",
+        "Find recent articles about deep learning for image recognition.",
+        "What are the current trends in quantitative finance?",
+        "Can you provide recent papers on neural networks for natural language processing?"
+    ],
+    "brave_search": [
+        "What are the outcomes of the most recent elections in Germany?",
+        "Tell me about the latest advancements in renewable energy technology.",
+        "Are there any new updates on the Mars rover mission?",
+        "What's the newest update on the Mars rover mission?",
+        "Is there any recent news about the global chip shortage?"
+    ],
+    "duckduckgo_search": [
+        "Could you find the most recent news regarding the climate change conference happening this week?",
+        "Can you find out if there are any recent developments in the Mars rover mission?",
+        "Tell me if there are any new policies regarding cryptocurrency regulation.",
+        "Is there any update on the presidential elections results?",
+        "What's the latest news on the global climate summit happening this week?"
+    ],
+    "duckduckgo_results_json": [
+        "What are the newest trends in artificial intelligence technology?",
+        "Could you provide information on the latest movie releases this month?",
+        "What are the current top headlines in global politics?",
+        "Please provide the most recent news on the climate change summit held in November 2023.",
+        "What are the headlines in the tech industry today?"
+    ],
+    "balance_sheets": [
+        "Can you provide the balance sheet for Google with a limit of five entries?",
+        "Could you retrieve the quarterly balance sheets for Google for the most recent fiscal year?",
+        "Can you show me the most recent balance sheet for Google ?",
+        "Can you provide the annual balance sheet for Apple Inc. for the past three years?",
+        "Fetch the trailing twelve months balance sheet for Microsoft and summarize the key financial figures."
+    ],
+    "cash_flow_statements": [
+        "Can you fetch the cash flow statement for Apple over the last quarter?",
+        "Please provide the trailing twelve months cash flow statement for Nvidia.",
+        "Could you get the cash flow statements for Alphabet Inc. on a quarterly basis for the last year?",
+        "Fetch the quarterly cash flow statement for IBM for the last quarter, please.",
+        "I want the quarterly cash flow statement for Meta Platforms Inc. for the latest quarter. Can you do that?"
+    ],
+    "income_statements": [
+        "Please provide the income statement for Google for the last fiscal year.",
+        "Can you retrieve the quarterly income statements for Apple using their ticker symbol?",
+        "Can you provide the trailing twelve months income statement for Tesla?",
+        "Find the last four quarterly income statements for Intel.",
+        "I need the most recent annual income statement for Netflix."
+    ],
+    "open_weather_map": [
+        "Can you provide me with the weather forecast for New York City?",
+        "I need the weather update for Sydney, Australia.",
+        "What's the weather like in Rio de Janeiro at the moment?",
+        "What's the current weather like in Tokyo, Japan? I need to know if I should bring an umbrella for my trip today.",
+        "Is it raining in Mumbai currently?"
+    ],
+    "polygon_aggregates": [
+        "I need a market analysis for Tesla's stock prices over the last quarter.",
+        "Can you provide the aggregate stock prices for AAPL from January 1, 2023, to January 31, 2023, with a daily timespan?",
+        "I would like to see the stock price aggregates for BABA with a daily timespan from September 1, 2023, to September 30, 2023.",
+        "I am researching Tesla's stock performance, could you fetch the weekly aggregates for TSLA from March 2023 to September 2023?",
+        "Please find the hourly aggregate stock prices for GOOGL on the date of July 15, 2023."
+    ],
+    "polygon_ticker_news": [
+        "Can you provide the latest news on Apple's stock?",
+        "I want to know the latest developments in Nvidia's stock. Can you find that?",
+        "Could you fetch the latest news articles about Google's stock?",
+        "Please provide me with the newest headlines for Microsoft's shares.",
+        "Find the current news updates for Amazon's stock ticker."
+    ],
+    "polygon_financials": [
+        "Could you find the recent financial data for TSLA's balance sheet?",
+        "Show me the stock data for Google's latest financial performance.",
+        "I'm looking for the most recent income statement for the stock ticker TSLA. Can you help with that?",
+        "I need the newest fundamental financial data for the stock ticker AMZN. Could you get that information?",
+        "I would like the current cash flow statement details for JNJ."
+    ],
+    "requests_put": [
+        "Please send a PUT request to 'https://api.example.com/orders/456' to change the order status to 'shipped' and update the tracking number to '123456789'.",
+        "Update the product details on my e-commerce site with the latest pricing and description.",
+        "I want to update the address details on the site 'https://api.example.com/address/789' with the new address line '456 Elm St', city 'Metropolis', and postal code '67890'.",
+        "I need to update the user profile information on the server at 'https://api.example.com/user/123' with new data including the name 'John Doe' and email 'john.doe@example.com'.",
+        "Can you update my profile information on this website with my new email and phone number?"
+    ],
+    "reddit_search": [
+        "Can you search for popular posts about climate change on Reddit?",
+        "I want to know what people are saying about the recent stock market crash on the r/investing subreddit.",
+        "Look up the current trending topics in the r/gaming subreddit.",
+        "Can you find recent posts about AI advancements on Reddit?",
+        "What's a recent post in r/travel that talks about budget-friendly destinations?"
+    ],
+    "semanticscholar": [
+        "Give me a summary of the newest AI research papers.",
+        "What are the latest trends in machine learning algorithms?",
+        "Search for scientific articles on the benefits of meditation for mental health.",
+        "What are the newest findings in neuroscience regarding brain plasticity from November 2023?",
+        "I'm looking for the latest research regarding renewable energy technologies that have been published since late 2023."
+    ],
+    "terminal": [
+        "How much available space do I have on my root partition?",
+        "Please create a new directory named 'NewFolder' in my desktop.",
+        "Display the last 20 lines of the log file named 'system.log'.",
+        "What's the command to check disk usage in the command line?",
+        "Execute the script named 'backup.sh' located in my scripts folder."
+    ],
+    "sleep": [
+        "Set a countdown for 30 seconds, and let me know when it's done.",
+        "Can you insert a 20-second pause right here?",
+        "Hold on for 7 seconds before giving me the next update.",
+        "In my automation project, I need to pause the execution for 3 seconds to mimic user wait time, could you show me the best way to code this?",
+        "Pause the operation for 8 seconds before moving forward."
+    ],
+    "stack_exchange": [
+        "Can you help me figure out how to optimize my SQL query for better performance?",
+        "What are some common use cases for the Observer pattern in software design?",
+        "I'm having trouble with a null pointer exception in Java, any suggestions?",
+        "Can you provide a detailed explanation and code examples for implementing a binary search algorithm in Python?",
+        "What are some best practices and code snippets for handling exceptions in Java applications?"
+    ],
+    "tavily_search_results_json": [
+        "Can you provide the newest information on the global energy crisis?",
+        "Tell me about the current situation with the new tech regulations in the EU.",
+        "Give me the latest developments in the ongoing political elections in South America.",
+        "Could you give me the latest news about the recent elections in various countries and their outcomes?",
+        "Can you provide the latest updates on the economic impact of recent natural disasters around the world?"
+    ],
+    "tavily_answer": [
+        "What's happening with the protests in Iran right now?",
+        "Give me the latest updates on the COVID-19 vaccine distribution in Europe.",
+        "What is the current state of the tech industry in Silicon Valley?",
+        "Can you tell me what the latest developments are in the Israel-Palestine conflict?",
+        "What are the recent advancements in renewable energy technologies?"
+    ],
+    "wikipedia": [
+        "Can you give me a brief overview of the history of the Internet?",
+        "What can you tell me about the founding and evolution of the company Tesla, including major milestones and achievements?",
+        "Can you provide a detailed overview of the history and significance of the Great Wall of China?",
+        "I'd like to learn about the cultural impact of the Beatles.",
+        "What happened during the Battle of Hastings?"
+    ],
+    "Wikidata": [
+        "What do you know about the Great Wall of China?",
+        "Could you explain the role and achievements of the company SpaceX in the advancement of space exploration?",
+        "Tell me about the company Tesla, Inc.",
+        "What is the historical significance of the Battle of Hastings?",
+        "I need information on the company Tesla, Inc."
+    ],
+    "yahoo_finance_news": [
+        "Can you provide me with the current stock news for Google?",
+        "Could you give me the recent financial news for the company with the ticker Nvidia?",
+        "Could you find the most recent news about Apple's financials?",
+        "Fetch the latest financial headlines for Google.",
+        "Let me know the latest financial developments regarding Netflix."
+    ],
+    "youtube_search": [
+        "Find YouTube videos featuring Bill Gates and limit the results to 3.",
+        "Can you provide some of the latest YouTube videos featuring Taylor Swift?",
+        "I would like to see some recent YouTube videos with content by Oprah Winfrey.",
+        "Show me the top 5 YouTube videos about Marie Curie.",
+        "Search for YouTube videos with Bill Gates, limit it to 3 results."
+    ],
+    "you_search": [
+        "Can you summarize the recent breakthroughs in AI technology that have been announced in the last month?",
+        "I would like to know the latest stock market trends and their potential impact on the global economy as of November 2023.",
+        "Can you find current information about the weather in Tokyo?",
+        "Can you provide the latest news updates about the recent developments in the conflict between Israel and Hamas as of November 2023?",
+        "Can you give me the most recent information on the climate change policies being discussed at the COP28 summit?"
+    ],
+    "list_directory": [
+        "Can you tell me all the files present in the Documents folder?",
+        "I need a list of everything in my Downloads folder.",
+        "Can you show me the contents of my Documents folder?",
+        "Please list all the contents of the 'Downloads' folder on my computer so I can delete unnecessary files.",
+        "List all the files and directories in my Documents folder to help me organize my files better."
+    ],
+    "move_file": [
+        "Please move the file at /tmp/report.txt to /tmp/archive/report.txt",
+        "Can you move the file from /tmp/data.csv to /tmp/processed/data.csv?",
+        "Move my temporary file from /tmp/notes.txt to /tmp/backup/notes.txt",
+        "I need to relocate the file at /tmp/logs/app.log to /tmp/logs/archive/app.log",
+        "Could you move the configuration file from /tmp/config.json to /tmp/settings/config.json?"
+    ],
+    "write_file": [
+        "Create a new file in /tmp/notes.txt with the content 'Meeting notes: Discuss project timeline'",
+        "Please write a text file to /tmp/todo.txt that contains my tasks for today",
+        "Can you create a JSON file at /tmp/config.json with my application settings?",
+        "Write a CSV file to /tmp/data.csv with the spreadsheet data I just provided",
+        "Save this information as a markdown file in /tmp/readme.md"
+    ],
+    "read_file": [
+        "Can you read the contents of ./data/queries.json for me?",
+        "Please show me what's in the file ./data/queries.json",
+        "I need to see the data in ./data/queries.json, can you read it?",
+        "Read the JSON data from ./data/queries.json and tell me what it contains",
+        "Could you open and display the contents of ./data/queries.json?"
+    ],
+    "file_delete": [
+        "Please delete the temporary file at /tmp/cache.txt",
+        "Remove the log file located at /tmp/app.log",
+        "Can you delete the old backup file at /tmp/backup.old?",
+        "I need to get rid of the file at /tmp/temp_data.json",
+        "Delete all files matching /tmp/test*.log"
+    ],
+    "copy_file": [
+        "Please make a copy of /tmp/report.txt to /tmp/report_backup.txt",
+        "Can you copy the file at /tmp/data.csv to /tmp/archives/data_copy.csv?",
+        "I need to duplicate the configuration file from /tmp/config.json to /tmp/config_backup.json",
+        "Create a copy of /tmp/logs/app.log and save it to /tmp/logs/app_copy.log",
+        "Copy the template file from /tmp/template.html to /tmp/new_site/template.html"
+    ],
+    "file_search": [
+        "Find all files with .log extension in the /tmp directory",
+        "Search for files named 'config' in /tmp",
+        "Can you find any CSV files in the /tmp folder?",
+        "Look for files that start with 'backup_' in /tmp",
+        "Search the /tmp directory for any files with 'report' in their filename"
+    ]
+}
