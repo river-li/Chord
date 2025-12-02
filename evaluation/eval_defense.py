@@ -100,7 +100,7 @@ def load_tools():
         AmadeusClosestAirport(),
         AmadeusFlightSearch(),
         ArxivQueryRun(),
-        BraveSearch.from_api_key(api_key=os.environ.get("BRAVE_API_KEY", "fake-key"), search_kwargs={"count": 1}),
+        BraveSearch.from_api_key(api_key=os.environ.get("BRAVE_SEARCH_API_KEY", "fake-key"), search_kwargs={"count": 1}),
         DuckDuckGoSearchRun(),
         DuckDuckGoSearchResults(),
         *file_toolkit.get_tools(),
