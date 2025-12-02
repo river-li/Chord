@@ -30,16 +30,6 @@ dependencies = [
     "llama-index-tools-notion==0.2.0",
     "llama-index-tools-openai-image-generation==0.3.0",
     "llama-index-tools-openapi==0.2.0",
-    "llama-index-tools-python-file==0.2.0",
-    "llama-index-tools-requests==0.2.0",
-    "llama-index-tools-tavily-research==0.2.0",
-    "llama-index-tools-text-to-image==0.2.0",
-    "llama-index-tools-weather==0.2.1",
-    "llama-index-tools-wikipedia==0.2.0",
-    "llama-index-tools-wolfram-alpha==0.2.0",
-    "llama-index-tools-yahoo-finance==0.2.0",
-    "llama-index-tools-yelp==0.2.0",
-    "llama-index-tools-duckduckgo==0.2.1",
     "matplotlib==3.10.7",
     "youtube-search>=2.1.2",
     "transformers>=4.57.1",
@@ -52,6 +42,11 @@ dependencies = [
     "mediawikiapi>=1.3",
     "wikibase-rest-api-client>=0.2.5",
     "dotenv>=0.9.9",
+    "ddgs>=9.9.2",
+    "duckduckgo-search>=8.1.1",
+    "arxiv>=2.3.1",
+    "wikipedia>=1.4.0",
+    "yfinance>=0.2.66",
 ]
 
 [build-system]

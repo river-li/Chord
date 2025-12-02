@@ -309,11 +309,18 @@ class TestingAgent:
                         content = self.extract_content(observation)
 
                         results.append(ToolMessage(content=content, tool_call_id=tool_call["id"], name=tool_call["name"]))
-                        self.tool_cache_cursor.execute(
-                            "INSERT INTO tool_cache (tool_name, tool_args, tool_result) VALUES (?, ?, ?)",
-                            (tool_call["name"], args_json, content)
-                        )
-                        self.tool_cache_conn.commit()
+                        try:
+                            self.tool_cache_cursor.execute(
+                                "INSERT INTO tool_cache (tool_name, tool_args, tool_result) VALUES (?, ?, ?)",
+                                (tool_call["name"], args_json, content)
+                            )
+                            self.tool_cache_conn.commit()
+                        except sqlite3.ProgrammingError:
+                            self.tool_cache_cursor.execute(
+                                "INSERT INTO tool_cache (tool_name, tool_args, tool_result) VALUES (?, ?, ?)",
+                                (tool_call["name"], args_json, json.dumps(content))
+                            )
+                            self.tool_cache_conn.commit()
                 else:
                     # only execute the tool and no need to cache it
                     tool = tool_pool[tool_call["name"]]
