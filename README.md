@@ -1,4 +1,9 @@
-# Chord: automatic XTHP threat scanner for LLM agent tools
+# Chord: XTHP threat scanner for LLM agent tools <a href="https://llmagentxthp.github.io"><img src="imgs/chord-logo.png" alt="Logo" align="right" width="72"/></a>
+
+[![arXiv](https://img.shields.io/badge/arXiv-2504.03111-b31b1b.svg)](https://arxiv.org/abs/2504.03111)
+[![Conference](https://img.shields.io/badge/NDSS-2026-blue)](https://www.ndss-symposium.org/ndss2026/)
+![Artifact](https://img.shields.io/badge/Artifact-Available,Functional,Reproduced-5B2D8B)
+
 
 <p>
 <a href="https://github.com/systemsecurity-uiuc/Chord/blob/master/docs/XTHP.pdf"> <img title="" src="imgs/paper.png" alt="loading-ag-167" align="right" width="220"></a>
